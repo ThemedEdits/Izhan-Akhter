@@ -248,7 +248,7 @@ a {
     width: 100%;
 }
 
-.admin-link {
+.nav-menu .admin-link {
     color: var(--primary);
     font-weight: 600;
 }
