@@ -1165,6 +1165,11 @@ a {
 
 @media (max-width: 768px) {
 
+    .modal-close{
+        top: -3px;
+        right: 10px;
+    }
+
     .video-thumbnail {
         width: 160px;
         height: 90px;
