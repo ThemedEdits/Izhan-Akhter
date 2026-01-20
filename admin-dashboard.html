@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="logout()">Logout</button>
+
+    <h2>Upload Video</h2>
+
+    <input type="file" id="videoFile" accept="video/*">
+    <input type="file" id="thumbnailFile" accept="image/*">
+
+    <select id="category">
+        <option>Wedding</option>
+        <option>Cinematic</option>
+        <option>Commercial</option>
+        <option>Reels</option>
+        <option>YouTube</option>
+        <option>Music Video</option>
+    </select>
+
+    <textarea id="description" placeholder="Description (optional)"></textarea>
+    <button id="uploadBtn">Upload</button>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/guard.js"></script>
+    <script type="module" src="js/upload.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
+</body>
+
+</html>

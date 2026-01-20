@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Izhan Akhter | Professional Video Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ---------- LANDING PAGE STYLES ---------- */
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.9)
+      ), url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero span {
+      color: var(--blue);
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 6px;
+      background: var(--blue);
+      color: white;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .about,
+    .skills-grid {
+      max-width: 800px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .skill {
+      background: var(--card);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--blue);
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      color: white;
+      border-radius: 6px;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid #1f2937;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div class="container hero">
+      <h1>Izhan <span>Akhter</span></h1>
+      <p>Professional Video Editor crafting cinematic visuals, commercials, reels & storytelling videos.</p>
+      <a href="#portfolio" class="btn">View Portfolio</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about">
+      <h2>About Me</h2>
+      <p>
+        I’m Izhan Akhter, a professional video editor with a passion for cinematic storytelling.
+        I specialize in wedding films, commercial videos, YouTube content, reels, and music videos.
+        My focus is clean cuts, emotional pacing, and visuals that leave impact.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="container">
+      <h2>Skills & Expertise</h2>
+
+      <div class="skills-grid">
+        <div class="skill">Adobe Premiere Pro</div>
+        <div class="skill">After Effects</div>
+        <div class="skill">Color Grading</div>
+        <div class="skill">Cinematic Editing</div>
+        <div class="skill">Wedding Films</div>
+        <div class="skill">Social Media Reels</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Featured Work</h2>
+
+      <div id="homePortfolio" class="preview-grid"></div>
+
+      <br>
+      <a href="portfolio.html" class="btn">View Full Portfolio</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+
+      <p id="contactStatus"></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Izhan Akhter — All Rights Reserved
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="js/firebase.js"></script>
+
+  <!-- Portfolio preview -->
+  <script type="module">
+    import { db } from "./js/firebase.js";
+    import {
+      collection,
+      query,
+      orderBy,
+      limit,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const container = document.getElementById("homePortfolio");
+
+    const q = query(
+      collection(db, "videos"),
+      orderBy("createdAt", "desc"),
+      limit(6)
+    );
+
+    onSnapshot(q, snap => {
+      container.innerHTML = "";
+      snap.docs.forEach(doc => {
+        const v = doc.data();
+        container.innerHTML += `
+          <div class="video-card">
+            <img src="${v.thumbnailUrl}">
+            <div class="overlay">▶</div>
+          </div>
+        `;
+      });
+    });
+  </script>
+
+  <!-- Contact -->
+  <script type="module" src="js/contact.js"></script>
+
+</body>
+</html>
