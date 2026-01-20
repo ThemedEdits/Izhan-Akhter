@@ -1,220 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Izhan Akhter | Professional Video Editor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    /* ---------- LANDING PAGE STYLES ---------- */
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.9)
-      ), url("https://images.unsplash.com/photo-1518770660439-4636190af475");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero {
-      max-width: 700px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero span {
-      color: var(--blue);
-    }
-
-    .hero p {
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 6px;
-      background: var(--blue);
-      color: white;
-      font-weight: 600;
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 2rem;
-    }
-
-    .about,
-    .skills-grid {
-      max-width: 800px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .skill {
-      background: var(--card);
-      padding: 15px;
-      border-radius: 8px;
-      border-left: 4px solid var(--blue);
-    }
-
-    .preview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .contact-form {
-      max-width: 600px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      background: #0f172a;
-      border: 1px solid #1f2937;
-      color: white;
-      border-radius: 6px;
-    }
-
-    footer {
-      padding: 20px;
-      text-align: center;
-      color: var(--muted);
-      border-top: 1px solid #1f2937;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izhan Akhter | Professional Video Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="https://izhan-akhter.vercel.app/" class="logo">Izhan<span>Akhter</span></a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="admin.html" target="_blank" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- HERO -->
-  <header>
-    <div class="container hero">
-      <h1>Izhan <span>Akhter</span></h1>
-      <p>Professional Video Editor crafting cinematic visuals, commercials, reels & storytelling videos.</p>
-      <a href="#portfolio" class="btn">View Portfolio</a>
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="container hero-content">
+            <h1 class="hero-title">Crafting <span class="highlight">Visual Stories</span> That Captivate</h1>
+            <p class="hero-subtitle">Professional Video Editor specializing in cinematic visuals, commercials, reels & storytelling videos that leave lasting impact.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate storyteller through visual media</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm <strong>Izhan Akhter</strong>, a professional video editor with a passion for cinematic storytelling. With years of experience in the industry, I specialize in creating emotionally resonant content that connects with audiences.</p>
+                    <p>My expertise spans wedding films, commercial videos, YouTube content, reels, and music videos. I believe in clean cuts, emotional pacing, and visuals that leave a lasting impact on viewers.</p>
+                    <p>Every project is approached with meticulous attention to detail, ensuring the final product not only meets but exceeds expectations.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>200+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Professional tools and techniques</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Adobe Premiere Pro</h3>
+                    <p>Professional video editing with advanced timeline management</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>After Effects</h3>
+                    <p>Motion graphics, visual effects, and dynamic animations</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Color Grading</h3>
+                    <p>Creating mood and atmosphere through precise color correction</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Cinematic Editing</h3>
+                    <p>Story-driven editing with emotional pacing and rhythm</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wedding Films</h3>
+                    <p>Capturing love stories with emotional depth and elegance</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Social Media Reels</h3>
+                    <p>Engaging short-form content optimized for social platforms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">A selection of my recent projects</p>
+            </div>
+            
+            <!-- Portfolio Filters -->
+            <div class="portfolio-filters" id="portfolioFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="cinematic">Cinematic</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="reels">Reels</button>
+                <button class="filter-btn" data-filter="youtube">YouTube</button>
+                <button class="filter-btn" data-filter="music">Music Video</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Videos will be loaded dynamically via JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading portfolio...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Have a project in mind? Get in touch!</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@izhanakhter.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (234) 567-8900</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Based in New York, NY</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="contactService">
+                            <option value="">Select Service</option>
+                            <option value="wedding">Wedding Video</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="youtube">YouTube Content</option>
+                            <option value="reels">Social Media Reels</option>
+                            <option value="music">Music Video</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contactMessage" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <p id="formStatus"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Izhan<span>Akhter</span></a>
+                    <p>Professional Video Editor & Visual Storyteller</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-vimeo"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Izhan Akhter. All Rights Reserved.</p>
+                <p class="footer-credits">Designed with <i class="fas fa-heart"></i> by Izhan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-video-container">
+                <video id="modalVideo" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-meta">
+                    <span id="modalCategory"></span>
+                    <span id="modalDate"></span>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container about">
-      <h2>About Me</h2>
-      <p>
-        I’m Izhan Akhter, a professional video editor with a passion for cinematic storytelling.
-        I specialize in wedding films, commercial videos, YouTube content, reels, and music videos.
-        My focus is clean cuts, emotional pacing, and visuals that leave impact.
-      </p>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <div class="container">
-      <h2>Skills & Expertise</h2>
-
-      <div class="skills-grid">
-        <div class="skill">Adobe Premiere Pro</div>
-        <div class="skill">After Effects</div>
-        <div class="skill">Color Grading</div>
-        <div class="skill">Cinematic Editing</div>
-        <div class="skill">Wedding Films</div>
-        <div class="skill">Social Media Reels</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO PREVIEW -->
-  <section id="portfolio">
-    <div class="container">
-      <h2>Featured Work</h2>
-
-      <div id="homePortfolio" class="preview-grid"></div>
-
-      <br>
-      <a href="portfolio.html" class="btn">View Full Portfolio</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-
-      <form class="contact-form" id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button class="btn" type="submit">Send Message</button>
-      </form>
-
-      <p id="contactStatus"></p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Izhan Akhter — All Rights Reserved
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script type="module" src="js/firebase.js"></script>
-
-  <!-- Portfolio preview -->
-  <script type="module">
-    import { db } from "./js/firebase.js";
-    import {
-      collection,
-      query,
-      orderBy,
-      limit,
-      onSnapshot
-    } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-    const container = document.getElementById("homePortfolio");
-
-    const q = query(
-      collection(db, "videos"),
-      orderBy("createdAt", "desc"),
-      limit(6)
-    );
-
-    onSnapshot(q, snap => {
-      container.innerHTML = "";
-      snap.docs.forEach(doc => {
-        const v = doc.data();
-        container.innerHTML += `
-          <div class="video-card">
-            <img src="${v.thumbnailUrl}">
-            <div class="overlay">▶</div>
-          </div>
-        `;
-      });
-    });
-  </script>
-
-  <!-- Contact -->
-  <script type="module" src="js/contact.js"></script>
-
+    <!-- Scripts -->
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/portfolio.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Contact form submission (basic)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Simulate form submission
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // In a real implementation, you would send this to a server
+            setTimeout(() => {
+                document.getElementById('formStatus').textContent = 'Thank you! Your message has been sent. I\'ll get back to you soon.';
+                document.getElementById('formStatus').className = 'success';
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('formStatus').textContent = '';
+                    document.getElementById('formStatus').className = '';
+                }, 5000);
+            }, 1500);
+        });
+        
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (window.scrollY > 100) {
+                scrollIndicator.style.opacity = '0';
+            } else {
+                scrollIndicator.style.opacity = '1';
+            }
+        });
+    </script>
 </body>
 </html>
